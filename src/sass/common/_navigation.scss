@@ -1,0 +1,228 @@
+.primary-navigate {
+    @media (min-width: 50em) {
+        text-align: center;
+    }
+    position: relative;
+    background: rgb(129,52,132);
+    background: radial-gradient(circle, rgba(129,52,132,1) 0%, rgba(195,48,76,1) 31%, rgba(237,55,43,1) 52%, rgba(241,90,51,1) 74%, rgba(248,168,67,1) 100%);
+}
+
+nav.desktop-version {
+    @media (max-width: 50em) {
+        display: none !important;
+    }
+}
+
+nav.mobile-version {
+    .navbar-toggler {
+        border: none;
+        background-clip: padding-box;
+    }
+
+    position: absolute;
+    top: -52px;
+    
+
+    .primary-navigate {
+        background: none;
+
+        li {
+            position: relative;
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding-inline: 0 25px;
+            cursor: pointer;
+
+            &.level1 {
+                padding-block: 0;
+                margin-bottom: 25px;
+            }
+
+            &.level2 {
+                padding-block: 0;
+            }
+
+
+            &.has-sub {
+                .sub-lists {
+                    display: none;
+                }
+            }
+
+            &.has-sub:after {
+                font-family: var(--ff-awesomeicon, 'Font Awesome 6 Free');
+                content: "\f078";
+                display: inline-block;
+                text-align: right;
+                position: absolute;
+                inset: 0 10px 0 0;
+                vertical-align: middle;
+            }
+
+            &.active.has-sub:after {
+                content: "\f077";
+            }
+
+            &.active.has-sub {
+                > .sub-lists {
+                    display: block;
+                }
+            }
+        }
+
+        .sub-lists {
+            background: none;
+        }
+        .sub-lists li {
+           
+            padding-inline: 0;
+        }
+    }
+
+    @media (min-width: 50em) {
+        display: none !important;
+    }
+}
+
+.primary-navigate {
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-top-left-radius: 100vmax;
+    @media (min-width: 50em) {
+        padding-left: 25px;
+    }
+    --max-sublists-size: 298px;
+
+    .sub-lists {
+        background: var(--clr-bg-subnav);
+        margin: 0;
+        padding: 0;
+        width: var(--max-sublists-size);
+        display: none;
+        z-index: 2;
+
+        li {
+            margin: 1rem .8rem;
+            padding: 0;
+            // width: 100%;
+            text-align: left;
+            display: block;
+
+            a {
+                color: #000;
+                font-size: 16px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .level1 {
+        position: relative;
+
+        @media(min-width: 50em) {
+            &.has-sub:hover {
+                > .sub-lists {
+                    display: block;
+                    position: absolute;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+
+    .level2 {
+        position: relative;
+
+        @media(min-width: 50em) {
+            &.has-sub:hover {
+                > .sub-lists {
+                    display: block;
+                    position: absolute;
+                    top: -14px;
+                    right: calc(-1 * var(--max-sublists-size));
+                }
+            }
+        }
+        
+    }
+
+
+    .level3 {
+        position: relative;
+
+        @media(min-width: 50em) {
+            &.has-sub:hover {
+                > .sub-lists {
+                    display: block;
+                    position: absolute;
+                }
+            }
+
+        }
+    }
+        
+}
+
+.primary-navigate[data-type='secondary'] {
+    position: relative;
+    @media (min-width: 50em) {
+        border-top-left-radius: 216px;
+        padding-left: 25px;
+    }
+
+    &::before {
+        content: ''; /* To generate the box */
+        position: absolute;
+        display: none;
+    }
+}
+
+.primary-navigate a {
+    cursor: pointer;
+}
+
+.primary-navigate li {
+    display: inline-block;
+    padding: 24px 8px 14px;
+}
+
+.primary-navigate li a {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+@media (max-width: 50em) {
+    .primary-navigate  {
+        border-radius: 0;
+    }
+}
+
+
+@media (min-width: 50em) {
+    #navbarSupportedContent {
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -1px;
+            width: 145px;
+            height: 65px;
+            background: url('../images/shape-curve-corner.png') no-repeat top left;
+            z-index: 2;
+        }   
+    }
+    .primary-navigate {
+        height: 60px;
+
+        li a {
+            color: var(--bs-white);
+        }
+    }
+}

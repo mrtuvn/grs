@@ -1,0 +1,87 @@
+// @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:300,400,500,700&subset=vietnamese');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap');
+// @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+// @font-face {
+//     font-family: 'UTM-Neo-Sans-IntelBold';
+//     src: url('../fonts/Roboto-Bold.ttf');
+// }
+
+// @font-face {
+//     font-family: 'UTM-Neo-Sans-Intel';
+//     src: url('../fonts/Roboto-Regular.ttf');
+// }
+
+// @font-face {
+//     font-family: 'Roboto-Medium';
+//     src: url('../fonts/Roboto-Medium.ttf');
+// }
+
+
+// @font-face {
+//     font-family: 'UTM-Neo-Sans-IntelBold';
+//     src: url('../fonts/RobotoCondensed-Bold.ttf');
+// }
+
+// @font-face {
+//     font-family: 'RobotoCondensed-Regular';
+//     src: url('../fonts/RobotoCondensed-Regular.ttf');
+// }
+
+@font-face {
+    font-family: 'UTM-Neo-Sans-Intel';
+    src: url('../fonts/UTM-Neo-Sans-Intel.ttf') format('ttf');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'UTM-Neo-Sans-Intel_Italic';
+    src: url('../fonts/UTM-Neo-Sans-Intel_Italic.ttf') format('ttf');
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'UTM-Neo-Sans-IntelBold';
+    src: url('../fonts/UTM-Neo-Sans-IntelBold.ttf') format('ttf');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'UTM-Neo-Sans-IntelBold_Italic';
+    src: url('../fonts/UTM-Neo-Sans-IntelBold_Italic.ttf') format('ttf');
+    font-weight: 700;
+    font-display: swap;
+    font-style: italic;
+}
+
+
+/* font */
+// @font-face {
+// 	font-family: var(--ff-primary);
+// 	font-display: swap;
+// 	font-weight: 400;
+// 	font-style: normal;
+// 	src: local(''),
+// 		 url('../font/UTM_Neo_Sans_Intel.ttf') format('ttf');
+// }
+
+
+// @font-face {
+// 	font-family: 'UTM Avo';
+// 	font-display: swap;
+// 	font-weight: 700;
+// 	font-style: normal;
+// 	src: local('@'),
+// 		 url('../fonts/UTM_AvoBold.ttf') format('ttf');
+// }
+
+// @font-face {
+// 	font-family: 'UTM Avo';
+// 	font-display: swap;
+// 	font-weight: 400;
+// 	font-style: normal;
+// 	src: local('@'),
+// 		 url('../fonts/UTM_Avo.ttf') format('ttf');
+// }

@@ -1,0 +1,242 @@
+.service-details-page {
+    .container {
+
+    }
+
+
+    .logo-designed-list {
+        display: grid;
+        gap: 10px 10px;
+        @media (min-width: 50em) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        place-items: center;
+    }
+
+    .processes {
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    .logo-projects {
+        h3:before {
+            content: '';
+            display: block;
+            background: url('../images/service-details/icon1.png') no-repeat center center;
+            width: 73px;
+            margin: 10px auto;
+            height: 67px;
+        }
+    }
+
+    .packages-wrap {
+        h3:before {
+            content: '';
+            display: block;
+            margin: 10px auto;
+            background: url('../images/service-details/icon2.png') no-repeat center center;
+            width: 73px;
+            height: 67px;
+        }
+    }
+
+
+    .processes {
+        h3:before {
+            content: '';
+            display: block;
+            margin: 10px auto;
+            background: url('../images/service-details/icon3.png') no-repeat center center;
+            width: 73px;
+            height: 67px;
+        }
+    }
+
+
+    .sales-points {
+        h3:before {
+            content: '';
+            display: block;
+            margin: 10px auto;
+            background: url('../images/service-details/icon4.png') no-repeat center center;
+            width: 73px;
+            height: 67px;
+        }
+    }
+
+
+    .packages-wrap {
+        .basic,
+        .advance,
+        .vip {
+            background-color: var(--clr-bg-subnav);
+            display: flex;
+            flex-direction: column;
+            font-size: 25px;
+            height: 100%;
+            border-radius: 5px;
+            
+
+            @media (min-width: 50em) {
+                min-height: 395px;
+                max-width: 394px;
+                padding-bottom: 50px;
+            }
+
+            li.item {
+                margin-bottom: 10px;
+            }
+
+        }
+
+        ul {
+            padding: 0;
+
+            li {
+                border-radius: 5px;
+            }
+        }
+
+        li.item::before {
+            
+            content: '';
+            display: inline-block;
+            width: 13px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .package-head {
+            border-radius: 5px;
+            padding: 10px;
+            min-height: 88px;
+
+            span {
+                font-size: 16px;
+                display: inline-block;
+                max-width: 26ch;
+                line-height: 1.1;
+            }
+
+            p {
+                margin-bottom: 6px;
+                font-size: 25px;
+            }
+        }
+
+        .package-details {
+            padding: 10px 12px;
+        }
+
+        .basic {
+            --main-section-clr: #ff9900;
+
+            .key {
+                color: var(--main-section-clr);
+            }
+
+            .package-head {
+                background-color: var(--main-section-clr);
+                color: var(--bs-white);
+            }
+
+            .cta-consult-action button {
+                background-color: var(--main-section-clr);
+            }
+        }
+
+        .advance {
+            --main-section-clr: #ff6600;
+
+            .key {
+                color: var(--main-section-clr);
+            }
+
+            .package-head {
+                background-color: var(--main-section-clr);
+                color: var(--bs-white);
+            }
+
+            .cta-consult-action button {
+                background-color: var(--main-section-clr);
+            }
+        }
+
+        .vip {
+            --main-section-clr: #ff3300;
+
+            .key {
+                color: var(--main-section-clr);
+            }
+
+            .package-head {
+                background-color: var(--main-section-clr);
+                color: var(--bs-white);
+            }
+
+            .cta-consult-action button {
+                background-color: var(--main-section-clr);
+            }
+        }
+
+        .basic li.item::before {
+            background: url('../images/service-details/li-mark.png') no-repeat center;
+        }
+
+        .advance li.item::before {
+            background: url('../images/service-details/li-mark2.png') no-repeat center;
+        }
+
+        .vip li.item::before {
+            background: url('../images/service-details/li-mark3.png') no-repeat center;
+        }
+
+        .cta-consult-action {
+            margin-top: auto;
+            
+            button {
+                border-radius: 5px;
+                text-align: center;
+                justify-content: center;
+                padding: 16px 20px;
+                font-size: 20px;
+
+                @media (min-width: 50em) {
+                    min-width: 299px;
+                }
+                
+            }
+        }
+    }
+
+    .sales-points {
+        .col-wrap {
+            div {
+                background: var(--clr-bg-subnav);
+                border-radius: 5px;
+                color: #000;
+                font-size: 28px;
+                position: relative;
+                margin-bottom: 15px;
+                margin-right: 30px;
+
+                &:nth-child(3n) {
+                    margin-right: 0;
+                }
+
+                &:before {
+                    position: absolute;
+                    content: '';
+                    top: -22px;
+                    left: 0px;
+                    display: inline-block;
+                    width: 55px;
+                    height: 45px;
+                    background: url('../images/service-details/sale-point-check.png') no-repeat center;
+                }
+            }
+        }
+    }
+    
+}

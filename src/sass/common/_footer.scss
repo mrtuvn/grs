@@ -1,0 +1,38 @@
+/* Footer */
+.footer-wrapper {
+    color: var(--bs-white);
+
+    > .container {
+        background-color: var(--clr-bg-footer);
+    }
+
+
+    .company-details {
+        h3 {
+            border-bottom: 2px solid var(--bs-white);
+            padding-bottom: 10px;
+        }
+
+        p:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .left-area {
+        display: grid;
+        place-items: center;
+    }
+
+    .right-area {
+        @media (min-width: 50em) {
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+}
+

@@ -1,0 +1,71 @@
+html {
+    overflow-x: hidden;
+}
+
+.grs-bg-sprites {
+    background: url('../images/grs-bg-sprites.png') no-repeat center;
+}
+
+h1+*,h2+*,h3+*,h4+*,h5+*,h6+* {
+    margin-top: .8em
+}
+
+h1+h1,h1+h2,h1+h3,h1+h4,h1+h5,h1+h6,h2+h1,h2+h2,h2+h3,h2+h4,h2+h5,h2+h6,h3+h1,h3+h2,h3+h3,h3+h4,h3+h5,h3+h6,h4+h1,h4+h2,h4+h3,h4+h4,h4+h5,h4+h6,h5+h1,h5+h2,h5+h3,h5+h4,h5+h5,h5+h6,h6+h1,h6+h2,h6+h3,h6+h4,h6+h5,h6+h6 {
+    margin-top: .4em
+}
+
+a:link,a:visited,.link:link,.link:visited {
+    text-decoration: none
+}
+
+body, input, textarea, select, button {
+    font-synthesis: none;
+    -moz-font-feature-settings: 'kern';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    direction: ltr;
+    text-align: left;
+}
+
+/* General */
+body {
+    -webkit-text-size-adjust: 100%;
+    overflow-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--ff-body);
+    color: var(--clr-primary-400);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    background: var(--bs-white);
+    font-weight: var(--fw-regular);
+    min-width: 320px;
+    font-style: normal;
+}
+
+
+@media screen and (max-width: 50em) {
+    :root {
+        
+    }
+}
+
+@media (min-width: 50em) {
+    :root {
+        
+    }
+}
+
+@media (min-width: 75em) {
+    .container {
+        max-width: var(--max-width);
+    }
+    
+}
+
+
+/* Utility classes */
+.row {
+    margin-top: 0;
+}
+

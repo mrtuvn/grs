@@ -1,0 +1,117 @@
+.service-page {
+    .intro {
+        max-width: 50ch;
+        font-size: 25px;
+        font-style: italic;
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    .service-mainlists {
+        background: url('../images/service/service-mainlists-bg.png') no-repeat center center;
+        min-height: 553px;
+
+        > .container {
+            margin-top: 50px;
+        }
+
+        .row > div {
+            min-height: 139px;
+            color: var(--bs-white);
+            text-align: center;
+            display: flex;
+            align-content: flex-end;
+            justify-content: center;
+            max-width: 340px;
+            margin: 40px auto 30px;
+            position: relative;
+
+            
+            &:before {
+                content: '';
+                display: inline-block;
+                left: -5px;
+                top: -33px;
+                position: absolute;
+                z-index: 1;
+                width: 148px;
+                height: 139px;
+            }
+
+            span {
+                
+                display: inline-block;
+                vertical-align: bottom;
+                width: 100%;
+                margin-top: auto;
+                margin-left: 50px;
+
+                font-size:  22px;
+            }
+        }
+
+        
+
+        .logo-bg:before {
+            background: url('../images/service/logo-bg.png') no-repeat top left;
+            background-size: contain;
+        }
+
+        .law-bg:before {
+            background: url('../images/service/law-bg.png') no-repeat  top left;
+            background-size: contain;
+        }
+
+        .product-bg:before {
+            background: url('../images/service/product-bg.png') no-repeat  top left;
+            background-size: contain;
+        }
+
+        .brand-bg:before {
+            background: url('../images/service/brand-bg.png') no-repeat  top left;
+            background-size: contain;
+        }
+
+        .gifts-bg:before {
+            background: url('../images/service/gifts-bg.png') no-repeat  top left;
+            background-size: contain;
+        }
+
+        .label-bg:before {
+            background: url('../images/service/label-bg.png') no-repeat  top left;
+            background-size: contain;
+        }
+    }
+
+    .our-path {
+        .container {
+            > * {
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+        }
+
+        [class*='-path'] {
+            
+            h2 span {
+                background: var(--clr-text-purple);
+                color: var(--bs-white);
+                padding: 8px;
+                margin-inline-end: 5px;
+            }
+
+            img {
+                align-items: center;
+                
+            }
+
+            ul li {
+                font-size: 26px;
+                margin-bottom: 14px;
+            }
+        }
+
+    }
+
+
+}

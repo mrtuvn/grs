@@ -1,0 +1,223 @@
+:root {
+    --ff-primary: 'UTM-Neo-Sans-Intel';
+	--ff-primary-bold: 'UTM-Neo-Sans-IntelBold';
+    --ff-secondary: 'Be Vietnam Pro';
+	--ff-third: 'Roboto';
+	--ff-experience: system-ui,-apple-system,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+    --ff-body: var(--ff-primary), var(--ff-experience);
+	--ff-awesomeicon: 'Font Awesome 6 Pro';
+	--lh-body: 1.5;
+
+	--fw-regular: 400;
+    --fw-bold: 700;
+    --fw-semibold: 600;
+
+	--fs-300: 0.8125rem;
+	--fs-400: 0.875rem;
+	--fs-500: 0.9375rem;
+	--fs-600: 1rem;
+	--fs-700: 1.875rem;
+	--fs-800: 2.5rem;
+	--fs-900: 3.5rem;
+
+    --clr-primary-400: hsl(0, 0%, 20%);
+	--clr-accent-500: hsl(12, 60%, 45%);
+	--clr-accent-400: hsl(12, 88%, 59%);
+	--clr-accent-300: hsl(12, 88%, 75%);
+	--clr-accent-100: hsl(13, 100%, 96%);
+  
+	--clr-neutral-900: hsl(232, 12%, 13%);
+	--clr-neutral-200: hsl(0 0% 97%);
+	--clr-neutral-100: hsl(0 0% 100%);
+	--clr-text-purple: hsl(278, 36%, 41%);
+
+	--clr-testimonal: hsl(220, 2%, 35%);
+
+    --clr-bg-footer: #78368e;
+    --bs-blue: #343456;
+    --clr-bg-subnav: #fbebef;
+
+    /* bootstrap custom */
+    --bs-link-color: #000;
+    --bs-body-bg: #fff;
+    
+
+	--fs-body: var(--fs-400);
+	--fs-primary-heading: var(--fs-800);
+	--fs-secondary-heading: var(--fs-700);
+	--fs-nav: var(--fs-500);
+	--fs-button: var(--fs-300);
+
+	/** sizing **/
+	--size-1: 0.25rem;
+	--size-2: 0.5rem;
+	--size-3: 0.625rem;
+	--size-4: 0.75rem;
+	--size-5: 0.875rem;
+	--size-6: 1rem;
+	--size-7: 1.25rem;
+	--size-8: 1.5rem;
+	--size-9: 1.75rem;
+	--size-10: 2rem;
+	--size-11: 2.25rem;
+	--size-12: 2.5rem;
+	--size-13: 2.75rem;
+	--size-14: 3rem;
+	--size-15: 4rem;
+	--size-16: 5rem;
+	--size-17: 7.5rem;
+	--size-19: 10rem;
+	--size-20: 15rem;
+	--size-21: 20rem;
+	--size-22: 30rem;
+
+	--size-fluid-1: clamp(0.875rem, 1vw, 1rem);
+	--size-fluid-2: clamp(1rem, 2vw, 1.5rem);
+	--size-fluid-3: clamp(1.5rem, 3vw, 2rem);
+	--size-fluid-4: clamp(2rem, 4vw, 3rem);
+	--size-fluid-5: clamp(4rem, 5vw, 5rem);
+	--size-fluid-6: clamp(5rem, 7vw, 7.5rem);
+	--size-fluid-7: clamp(7.5rem, 10vw, 10rem);
+	--size-fluid-8: clamp(10rem, 20vw, 15rem);
+	--size-fluid-9: clamp(15rem, 30vw, 20rem);
+	--size-fluid-10: clamp(20rem, 40vw, 30rem);
+	--size-content-1: 25ch;
+	--size-content-2: 45ch;
+	--size-content-3: 65ch;
+	--size-heading-1: 22ch;
+	--size-heading-2: 28ch;
+	--size-heading-3: 36ch;
+
+
+	/* layer overlay stack index */
+	--z-index-header-shape: 1;
+	--z-index-toplinks: 2;
+	--z-index-logo: 2;
+	--z-index-nav: 2;
+	// $zindex-dropdown:                   1000;
+	// $zindex-sticky:                     1020;
+	// $zindex-fixed:                      1030;
+	// $zindex-modal-backdrop:             1040;
+	// $zindex-offcanvas:                  1050;
+	// $zindex-modal:                      1060;
+	// $zindex-popover:                    1070;
+	// $zindex-tooltip:                    1080;
+
+	/** layout **/
+    --max-width: 1272px;
+}
+
+// screen size
+$max-xs : 575;
+$min-sm : 576;
+$max-sm : 767;
+$min-md : 768;
+$max-md : 991;
+$min-lg : 992;
+$max-lg : 1199;
+$min-xl : 1200;
+
+// Extend
+%clearfix {*zoom: 1;&:before, &:after {content: " ";display: table;}&:after {clear: both;}}
+%uppercase {text-transform:uppercase;}
+%listreset {margin: 0;padding: 0;list-style: none;}
+
+// image ratio
+@mixin aspect-ratio($width, $height) {
+	position: relative;
+	overflow: hidden;
+	&:before {
+		display: block;
+		content: "";
+		width: 100%;
+		padding-top: ($height / $width) * 100%;
+		height: 0;
+	}
+	> picture,
+	> img {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		transform: translateY(-50%);
+	}
+}
+
+@mixin font-family($font, $sytle:normal) {
+
+	@if ($font == $font-regular) or ($font == $font-bold) {
+		@if $sytle == italic {
+			font-style:italic;
+		} @else if $sytle == normal {
+			font-style:normal;
+		}
+
+	}
+
+	@if ($font == $font-regular) {
+		font-weight:400;
+	} @else if ($font == $font-light) {
+		font-weight:300;
+	} @else if ($font == $font-semibold) {
+		font-weight:600;
+	} @else if ($font == $font-bold) {
+		font-weight:700;
+	} @else {
+		font-weight:400;
+	}
+}
+
+@mixin screen($size, $type:max, $pixels:false) {
+	@if $size == 'xs' {
+		@media (max-width: $max-xs + px) {
+			@content;
+		}
+	} @else if $size == 'sm' {
+		@media (min-width: $min-sm + px) and (max-width: $max-sm + px) {
+			@content;
+		}
+	} @else if $size == 'md' {
+		@media (min-width: $min-md + px) and (max-width: $max-md + px) {
+			@content;
+		}
+	} @else if $size == 'lg' {
+		@media (min-width: $min-lg + px) and (max-width: $max-lg + px) {
+			@content;
+		}
+	} @else if $size == 'xl' {
+		@media (min-width: $min-xl + px) {
+			@content;
+		}
+	} @else if $size == 'landscape' {
+		@media (orientation: landscape) {
+			@content;
+		}
+	} @else if $size == 'portrait' {
+		@media (orientation: portrait) {
+			@content;
+		}
+	} @else if $size == 'custom' {
+		@media ($type + -width: $pixels + px) {
+			@content;
+		}
+	} @else if $size == 'print' {
+		@media print {
+			@content;
+		}
+	}
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+	content: $content;
+	display: $display;
+	position: $pos;
+}
+
+@mixin truncate($truncation-boundary, $overflow: ellipsis) {
+	max-width: $truncation-boundary;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: $overflow;
+}

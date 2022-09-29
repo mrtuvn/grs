@@ -53,6 +53,7 @@ nav.mobile-version {
             &.has-sub:after {
                 font-family: var(--ff-awesomeicon, 'Font Awesome 6 Free');
                 content: "\f078";
+                font-size: 16px;
                 display: inline-block;
                 text-align: right;
                 position: absolute;
@@ -112,7 +113,8 @@ nav.mobile-version {
 
             a {
                 color: #000;
-                font-size: 16px;
+                font-size: var(--fs600);
+                text-transform: none;
 
                 &:hover {
                     text-decoration: underline;
@@ -123,6 +125,7 @@ nav.mobile-version {
 
     .level1 {
         position: relative;
+        text-transform: uppercase;
 
         @media(min-width: 50em) {
             &.has-sub:hover {
@@ -192,7 +195,6 @@ nav.mobile-version {
 }
 
 .primary-navigate li a {
-    text-transform: uppercase;
     text-decoration: none;
 }
 

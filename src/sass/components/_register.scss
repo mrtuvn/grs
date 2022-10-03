@@ -1,0 +1,137 @@
+.trigger-regsiter-btn {
+    border: none;
+    border-width: 0;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+html:has(.dialog-register[open]) {
+    overflow: hidden;
+}
+
+.dialog-register {
+    --btn-submit-color: #cb99cc;
+    --input-background-color: #f3d9e4;
+    --max-width: 960px;
+
+    @media (max-width: 48em) {
+        padding: 12px;
+        width: calc(100% - 4vw);
+    }
+
+    width: 100%;
+
+    @media (min-width: 48em) {
+        inset: 12% 20%;
+        padding: 30px;
+    }
+    
+    background: #fce5ef;
+    border: none;
+    position: fixed;
+    z-index: var(--zIndexDialog, 1060);
+    margin: 1.76rem auto;
+    border-radius: 2px;
+    // inset: auto;
+    
+    max-width: var(--max-width);
+    
+    // overflow: none;
+
+    .dialog-content {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+        position: relative;
+
+        article {
+            text-align: center;
+        }
+
+        article h2 {
+            font-size: 26px;
+            color: #7e3f83;
+        }
+
+        article h3 {
+            font-size: 15px;
+            color: #9f62a8;
+            font-style: italic;
+
+            margin-bottom: 30px;
+        }
+
+        .dialog-header {
+            position: relative;
+
+            .close-register-modal {
+                position: absolute;
+                right: 0;
+                @media (max-width: 48em) {
+                    top: -6px;
+                }
+                top: -20px;
+                border: none;
+                background: none;
+                font-size: 1.8rem;
+                font-weight: 700;
+                line-height: 1;
+                color: #000;
+                text-shadow: 0 1px 0 #fff;
+            }
+        }
+
+
+        .form-group {
+            display: grid;
+            gap: 16px;
+            margin-bottom: 30px;
+
+            &:has(:not(:placeholder-shown):valid) > input {
+                outline: 1px solid red;
+            }
+
+            textarea,
+            input {
+                border-radius: 8px;
+                background-color: var(--input-background-color);
+            }
+
+        }
+
+        .submit-btn {
+            min-width: 300px;
+            background: var(--btn-submit-color);
+            box-shadow: none;
+            text-align: center;
+            display: block;
+            margin: auto;
+            color: #f1eff4;
+            border-radius: 8px;
+
+            span {
+                font-size: 17px;
+            }
+
+            &:hover {
+                color: #f1eff4;
+            }
+        }
+
+        .note {
+            text-align: center;
+            margin: 30px auto 0;
+
+            @media (min-width: 70em) {
+                width: 60ch;
+            }
+            
+            span {
+                display: block;
+                font-size: 19px;
+            }
+        }
+    }
+}

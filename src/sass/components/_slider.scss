@@ -2,7 +2,6 @@
 // .slide-actions {
     
 // }
-
 .events-slider {
     .carousel-item-images {
         display: grid;
@@ -17,6 +16,10 @@
         grid-auto-columns: 20%;
         padding-block: 1rem;
         overflow-x: scroll;
+    }
+
+    .slide-actions {
+        display: none;
     }
 
     .carousel-item-images img {

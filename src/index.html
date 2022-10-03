@@ -132,7 +132,7 @@
         <div class="container">
           <div class="row w-100 g-0">
             <div class="hero-wrap col-12">
-              <img class="img-fluid" src="images/banners/hero-banner.jpg" alt="main-hero" />
+              <img class="img-fluid" src="images/banners/main-banner.gif" alt="main-hero" />
             </div>
           </div>
         </div>
@@ -165,13 +165,62 @@
               <div class="inner-area | text-center position-relative">
                 <span class="callme"></span>
                 <span class="zalo"></span>
-                <div class="register-text"><span class="text-inner">Đăng ký ngay</span></div>
+                <div class="register-text"><button class="text-inner trigger-regsiter-btn open-register-modal" type="button">Đăng ký ngay</button></div>
                 <span class="chatmessages"></span>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <dialog class="dialog-register" id="registerModal" aria-labelledby="registerModal">
+        <div class="dialog-content">
+          <div class="dialog-header">
+            <button type="button" class="close-register-modal" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+            <article>
+              <h2 class="text-center">Thông tin khách hàng</h2>
+              <h3>GRS luôn lắng nghe và sẵn sàng đưa ra các giải pháp phù hợp nhất cho thương hiệu của bạn</h3>
+            </article>
+          </div>
+          <div class="dialog-body">
+            <form>
+              <input type="hidden" name="formkey" value=""/>
+              <div class="form-group">
+                <div class="input-groups">
+                  <input type="text" class="form-control" placeholder="Họ và tên*" aria-label="Họ và tên*" aria-describedby="Họ và tên*">
+                </div>
+
+                <div class="input-groups">
+                  <input type="text" class="form-control" placeholder="Địa chỉ e-mail*" aria-label="Địa chỉ e-mail" aria-describedby="Địa chỉ e-mail*">
+                </div>
+
+                <div class="input-groups">
+                  <input type="tel" class="form-control" placeholder="Số điện thoại*" aria-label="Số điện thoại*" aria-describedby="Số điện thoại*">
+                </div>
+
+                <div class="input-groups">
+                  <input type="text" class="form-control" placeholder="Yêu cầu dịch vụ*" aria-label="Yêu cầu dịch vụ*" aria-describedby="Yêu cầu dịch vụ*">
+                </div>
+
+                <div class="input-groups">
+                  <textarea type="text" class="form-control" placeholder="Nội dung yêu cầu" style="min-height: 120px" aria-label="Nội dung yêu cầu*" aria-describedby="Nội dung yêu cầu*"></textarea>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button class="submit-btn button btn" disabled><span>Gửi yêu cầu</span></button>
+              </div>
+            </form>
+            <div class="note center text-center">
+              GRS cảm ơn quý khách đã luôn tin tưởng và đồng hành, chúng tôi sẽ luôn tận tâm phục vụ quý khách vì chúng tôi hiểu rằng:
+              <span>“Khách hàng chính là trọng tâm”</span>
+            </div>
+          </div>
+        </div>
+
+      </dialog>
 
       <section class="partners">
         <div class="container">
@@ -519,8 +568,8 @@
                 <div class="company-details">
                   <h3>VISIONBRANDS - GRS CO.,LTD</h3>
                   <p class="w-100"><span><strong>O:</strong> Tòa Golden Heart - Nguyễn Xiển - Đại Kim - Hoàng Mai - Hà Nội</span></p>
-                  <p class="d-sm-flex d-md-inline-flex flex-sm-column flex-md-row justify-content-between w-100"><span class="d-sm-block d-md-inline-block "><strong>E:</strong> visionbrandscontact@gmail.com</span><span class="d-sm-block d-md-inline-block "><strong>H:</strong> 08.999.81.556</span></p>
-                  <p class="d-sm-flex d-md-inline-flex flex-sm-column flex-md-row justify-content-between w-100"><span class="d-sm-block d-md-inline-block "><strong>W:</strong> www.visionbrand.vn</span><span class="d-sm-block d-md-inline-block "><strong>C:</strong> 08.987.82.990</span></p>
+                  <p class="d-sm-flex d-md-inline-flex flex-sm-column flex-md-row justify-content-between w-100"><span class="d-sm-block d-md-inline-block "><strong>E:</strong> visionbrandscontact@gmail.com</span><span class="d-sm-block d-md-inline-block"><strong>H:</strong> <a class="font-weight-bold text-white text-decoration-none" href="tel:0899981556">08.999.81.556</a></span></p>
+                  <p class="d-sm-flex d-md-inline-flex flex-sm-column flex-md-row justify-content-between w-100"><span class="d-sm-block d-md-inline-block "><strong>W:</strong> www.visionbrand.vn</span><span class="d-sm-block d-md-inline-block"><strong>C:</strong> <a class="font-weight-bold text-white text-decoration-none" href="tel:0898782990">08.987.82.990</a></span></p>
                 </div>
               </div>
             </div>

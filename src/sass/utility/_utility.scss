@@ -1,25 +1,29 @@
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-spacer, 1rem);
+}
+
 .even-columns {
-    display: grid;
-    gap: 1rem;
+  display: grid;
+  gap: 1rem;
 }
 
 @media (min-width: 50em) {
-    .even-columns {
-      grid-auto-flow: column;
-      grid-auto-columns: 1fr;
-    }
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
   }
+}
 
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap; /* added line */
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
 }
 
 .text-primary-400 {
